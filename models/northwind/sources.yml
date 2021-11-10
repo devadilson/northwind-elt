@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: northwind
+    tables:
+      - name: orders
+        descripton: Essa é a tabela de compras
+      - name: customers
+        descripton: Essa é a tabela de clientes
+        columns:
+          - name: customer_id
+            description: Id do Cliente
+            tests:
+              - unique
+              - not_null
+      - name: products
+        descripton: Essa é a tabela de produtos
+      - name: shippers
+        descripton: Essa é a tabela de expedidores
+      - name: suppliers
+        descripton: Essa é a tabela de fornecedores
+      
