@@ -5,7 +5,7 @@ with
            ,company_name as shipper_name
            ,phone	
 
-        from {{ source('northwind202111','public_shippers') }}
+        from {{ source('northwind','shippers') }}
     )
 
 select * from source_data

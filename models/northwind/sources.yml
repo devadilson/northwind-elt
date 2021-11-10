@@ -1,11 +1,11 @@
 version: 2
 
 sources:
-  - name: northwind202111
+  - name: northwind
     tables:
-      - name: public_orders
+      - name: orders
         descripton: Essa é a tabela de compras
-      - name: public_customers
+      - name: customers
         descripton: Essa é a tabela de clientes
         columns:
           - name: customer_id
@@ -13,10 +13,10 @@ sources:
             tests:
               - unique
               - not_null
-      - name: public_products
+      - name: products
         descripton: Essa é a tabela de produtos
-      - name: public_shippers
+      - name: shippers
         descripton: Essa é a tabela de expedidores
-      - name: public_suppliers
+      - name: suppliers
         descripton: Essa é a tabela de fornecedores
       

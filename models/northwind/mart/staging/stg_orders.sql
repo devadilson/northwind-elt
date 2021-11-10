@@ -16,7 +16,7 @@ with
             , ship_address
             , required_date 
     
-        from {{ source('northwind202111','public_orders') }}
+        from {{ source('northwind','orders') }}
     )
 
 select * from source_data

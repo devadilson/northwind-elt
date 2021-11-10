@@ -14,7 +14,7 @@ with
         ,fax		
         ,homepage	
 
-        from {{ source('northwind202111','public_suppliers') }}
+        from {{ source('northwind','suppliers') }}
     )
 
 select * from source_data

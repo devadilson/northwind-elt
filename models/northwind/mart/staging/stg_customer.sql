@@ -13,7 +13,7 @@ with
            ,phone		
            ,fax	
 
-        from {{ source('northwind202111','public_customers') }}
+        from {{ source('northwind','customers') }}
     )
 
 select * from source_data

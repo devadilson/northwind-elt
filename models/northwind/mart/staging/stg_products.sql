@@ -12,7 +12,7 @@ with
            ,reorder_level		
            ,discontinued	
 
-        from {{ source('northwind202111','public_products') }}
+        from {{ source('northwind','products') }}
     )
 
 select * from source_data
