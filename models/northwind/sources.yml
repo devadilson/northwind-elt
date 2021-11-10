@@ -16,7 +16,7 @@ sources:
       - name: products
         descripton: Essa é a tabela de produtos
       - name: shippers
-        descripton: Essa é a tabela de expedidores
+        descripton: Essa é a tabela de transportadoras
       - name: suppliers
         descripton: Essa é a tabela de fornecedores
       

@@ -1,7 +1,7 @@
 version: 2
 
 models:
-    - name: fact_orders
+    - name: fact_order
       description: "Tabela de Fatos"
       columns:
           - name: order_id
