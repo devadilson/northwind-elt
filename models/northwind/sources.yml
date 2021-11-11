@@ -19,4 +19,6 @@ sources:
         descripton: Essa é a tabela de transportadoras
       - name: suppliers
         descripton: Essa é a tabela de fornecedores
+      - name: order_details
+        descripton: Essa é a tabela de detalhes da ordem
       
