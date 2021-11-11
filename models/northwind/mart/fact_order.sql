@@ -23,6 +23,14 @@ with
         from {{ref('dim_product')}}
     )
 
+    , shippers as (
+        select
+        shipper_sk
+        ,shipper_id
+        ,shipper_name
+        from {{ref('dim_shipper')}}
+)
+
 , orders_with_sk as (
         select
         orders.order_id
@@ -44,14 +52,6 @@ with
     left join employees employees on orders.employee_id = employees.employee_id
     left join customers customers on orders.customer_id = customers.customer_id
     left join shippers shippers on orders.shipper_id = shippers.shipper_sk
-)
-
-, shippers as (
-        select
-        shipper_sk
-        ,shipper_id
-        ,shipper_name
-        from {{ref('dim_shipper')}}
 )
 
 , suppliers as (
