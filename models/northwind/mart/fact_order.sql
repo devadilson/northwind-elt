@@ -11,7 +11,7 @@ with
 
     , employees as (
         select
-        , employee_sk
+        employee_sk
         , employee_id
         , first_name
         , last_name
