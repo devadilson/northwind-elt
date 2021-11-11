@@ -21,4 +21,6 @@ sources:
         descripton: Essa é a tabela de fornecedores
       - name: order_details
         descripton: Essa é a tabela de detalhes da ordem
+      - name: employees
+        descripton: Essa é a tabela de empregados
       
