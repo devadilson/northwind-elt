@@ -7,9 +7,7 @@ with
 )
     , transformed as (
         select
-
-
-           row_number() over (order by order_id) as order_sk -- auto incremental surrogate key
+        row_number() over (order by order_id) as order_sk -- auto incremental surrogate key
           ,order_id	
           ,product_id
           ,discount
