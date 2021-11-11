@@ -9,6 +9,14 @@ with
         from {{ref('dim_customers')}}
     )
 
+    , employees as (
+        select
+        employee_sk
+        ,employee_id
+        ,customer_name
+        from {{ref('dim_employees')}}
+    )
+
 , products as (
         select
         product_id
@@ -20,6 +28,7 @@ with
 , orders_with_sk as (
         select
         orders.order_id
+        , employees.employee_id
         , customers.customer_id
         , customers.customer_name
         , orders.order_date
@@ -34,7 +43,9 @@ with
         , orders.required_date 
 
     from {{ref('stg_orders')}} orders
+    left join employees employees on orders.employee_id = employees.employee_id
     left join customers customers on orders.customer_id = customers.customer_id
+    left join shippers shippers on orders.shipper_id = shippers.shipper_sk
 )
 
 , shippers as (
@@ -72,5 +83,4 @@ select  order_id
         , required_date 
         , supplier_id
         , supplier_name
-        , products.unit_price
-from products, orders_with_sk, shippers, suppliers
+from products, orders_with_sk, shippers, suppliers, employees
