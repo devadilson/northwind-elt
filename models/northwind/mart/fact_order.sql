@@ -11,7 +11,8 @@ with
 
     , employees as (
         select
-        employee_sk
+        employee_sk,
+        employee_id
         from {{ref('dim_employees')}}
     )
 
