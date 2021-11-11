@@ -71,9 +71,7 @@ with
         , orders.ship_city
         , orders.ship_name
         , orders.freight
-        , orders.required_date 
-        , orders.unit_price
-        , orders.
+        , orders.required_date        
 
     from {{ref('stg_orders')}} orders
     left join employees employees on orders.employee_id = employees.employee_id
