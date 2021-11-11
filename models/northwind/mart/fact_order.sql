@@ -80,6 +80,7 @@ with
     left join order_detail order_detail on order_detail.order_id = orders.order_id and order_detail.product_id = products.product_id
 )
 
+select * from orders_with_sk
 
 /* select  order_id
         , customer_id
