@@ -8,8 +8,6 @@ with
            ,first_name
            ,last_name
            ,employee_id
-           ,country
-           ,city
            ,address
            ,birth_date
 
