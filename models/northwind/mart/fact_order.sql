@@ -60,6 +60,8 @@ with
             , employees.first_name
             , employees.last_name
             , employees.employee_id
+            , products.product_id
+            , products.product_name
             , customers.customer_id
             , customers.customer_name
             , orders.order_date
