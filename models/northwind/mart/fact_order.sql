@@ -77,7 +77,8 @@ with
     left join employees employees on orders.employee_id = employees.employee_id
     left join customers customers on orders.customer_id = customers.customer_id
     left join shippers shippers on orders.shipper_id = shippers.shipper_sk
-    left join order_detail order_detail on order_detail.order_id = order.order_id and order_detail.product_id on products.product_id
+    left join order_detail order_detail on order_detail.order_id = order.order_id
+    left join order_detail order_detail on order_detail.product_id on products.product_id
 )
 
 
