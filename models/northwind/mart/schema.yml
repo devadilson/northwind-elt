@@ -41,3 +41,19 @@ models:
             tests:
                 - unique
                 - not_null
+    - name: dim_employees
+      description: "Dimensão dos Empregados"
+      columns:
+          - name: employee_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+    - name: dim_order_details
+      description: "Dimensão dos Detalhes da Ordem"
+      columns:
+          - name: order_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
