@@ -67,8 +67,8 @@ select  order_id
         , customer_id
         , customer_name
         , employees.employee_id
-        , first_name
-        , last_name
+        , employees.first_name
+        , employees.last_name
         , product_id
         , product_name
         , order_date
