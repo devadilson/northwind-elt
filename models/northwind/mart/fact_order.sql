@@ -13,6 +13,7 @@ with
         select
         product_id
         ,product_name
+        ,unit_price
         from {{ref('dim_product')}}
     )
 
@@ -20,7 +21,7 @@ with
         select
         orders.order_id
         , customers.customer_id
-        , customer_name
+        , customers.customer_name
         , orders.order_date
         , orders.ship_region
         , orders.shipped_date
@@ -71,4 +72,5 @@ select  order_id
         , required_date 
         , supplier_id
         , supplier_name
+        , products.unit_price
 from products, orders_with_sk, shippers, suppliers
