@@ -63,7 +63,7 @@ with
         from {{ref('dim_supplier')}}
 )
 
-select  order_id
+select  orders.order_id
         , customer_id
         , customer_name
         , orders.employee_id
