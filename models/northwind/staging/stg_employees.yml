@@ -1,10 +1,10 @@
 with
     source_data as (
         select
-           country		
+           country
            ,city
-           ,postal_code		
-           ,hire_date	
+           ,postal_code
+           ,hire_date
            ,first_name
            ,last_name
            ,employee_id
