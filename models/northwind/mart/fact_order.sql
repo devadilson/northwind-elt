@@ -12,8 +12,6 @@ with
     , employees as (
         select
         employee_sk
-        ,employee_id
-        ,customer_name
         from {{ref('dim_employees')}}
     )
 
