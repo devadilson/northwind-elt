@@ -66,7 +66,7 @@ with
 select  order_id
         , customer_id
         , customer_name
-        , orders.employee_id
+        , employees.employee_id
         , employees.first_name
         , employees.last_name
         , product_id
