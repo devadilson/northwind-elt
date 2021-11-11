@@ -7,7 +7,7 @@ with
 )
     , transformed as (
         select
-           row_number() over (order by employee_id) as empoloyee_sk -- auto incremental surrogate key
+           row_number() over (order by employee_id) as employee_sk -- auto incremental surrogate key
            , employee_id
            , first_name
            , last_name
