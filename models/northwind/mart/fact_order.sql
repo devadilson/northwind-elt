@@ -19,11 +19,11 @@ with
     )
 
     , products as (
-            select
-            product_id
-            ,product_name
-            ,unit_price
-            from {{ref('dim_product')}}
+        select
+        product_id
+        ,product_name
+        ,unit_price
+        from {{ref('dim_product')}}
     )
 
     , shippers as (
@@ -35,26 +35,26 @@ with
     )
 
     , suppliers as (
-            select
-            supplier_sk
-            ,supplier_id
-            ,supplier_name
-            from {{ref('dim_supplier')}}
+        select
+        supplier_sk
+        ,supplier_id
+        ,supplier_name
+        from {{ref('dim_supplier')}}
     )
 
     , order_detail as (
-            select
-            order_sk
-            ,order_id
-            ,product_id
-            ,discount
-            ,unit_price
-            ,quantity	
-            from {{ref('dim_order_details')}}
+        select
+        order_sk
+        ,order_id
+        ,product_id
+        ,discount
+        ,unit_price
+        ,quantity	
+        from {{ref('dim_order_details')}}
     )
 
     , orders_with_sk as (
-            select
+        select
             orders.order_id
             , employees.employee_id
             , employees.first_name
@@ -74,12 +74,11 @@ with
             , orders.ship_name
             , orders.freight
             , orders.required_date        
-
         from {{ref('stg_orders')}} orders
         left join employees employees on orders.employee_id = employees.employee_id
         left join customers customers on orders.customer_id = customers.customer_id
         left join shippers shippers on orders.shipper_id = shippers.shipper_sk
-        left join order_detail order_detail on order_detail.order_id = orders.order_id and order_detail.product_id = products.product_id
+        left join order_detail order_detail on order_detail.order_id = orders.order_id
     )
 
     select * from orders_with_sk
