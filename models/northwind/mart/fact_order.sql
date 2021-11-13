@@ -55,7 +55,7 @@ with
 
     , orders_with_sk as (
         select
-            orders.order_id
+            order_detail.order_id
             , employees.employee_id
             , employees.first_name
             , employees.last_name
@@ -81,7 +81,7 @@ with
 
    /*  select * from orders_with_sk */
 
-select  orders.order_id
+select  orders_with_sk.order_id
         , customer_id
         , customer_name
         , employees.employee_id
