@@ -14,9 +14,8 @@ with
             , freight
             , ship_via as shipper_id
             , ship_address
-            , required_date 
-    
-        from {{ source('northwind','orders') }}
+            , required_date
+        from {{source('northwind','orders')}}
     )
 
 select * from source_data
