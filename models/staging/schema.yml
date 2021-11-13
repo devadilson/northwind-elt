@@ -2,7 +2,6 @@ version: 2
 
 sources:
   - name: northwind
-    schema: public
     description: This is the northwind erp postgres database replica
     tables:
       - name: orders
