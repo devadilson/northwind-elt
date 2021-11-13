@@ -15,8 +15,6 @@ with
             , phone
             , company_name
             , contact_title
-            , _sdc_batched_at
-            , _sdc_extracted_at
         from {{source('northwind','customers')}}
 )
 

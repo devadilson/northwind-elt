@@ -19,11 +19,6 @@ with
             , title
             , title_of_courtesy
             , notes
-            , _sdc_batched_at
-            , _sdc_extracted_at
-            , _sdc_received_at
-            , _sdc_sequence
-            , _sdc_table_version
         from {{source('northwind','employees')}}
     )
 
