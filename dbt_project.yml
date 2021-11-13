@@ -46,7 +46,6 @@ models:
 seeds:
   northwind:
     +enabled: true
-    +schema: seed_data
     seed_supplier_divisions:
       +column_types:
         country: text
