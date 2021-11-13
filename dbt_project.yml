@@ -33,6 +33,21 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   northwind:
-    # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    # Persists documentation of tables and columns to the DW metadata
+    +persist_docs:
+      relation: true
+      columns: true
+    # Applies to all files under models/example/
+    staging:
+        materialized: ephemeral
+    marts:
+        materialized: table
+
+seeds:
+  northwind:
+    +enabled: true
+    +schema: seed_data
+    seed_supplier_divisions:
+      +column_types:
+        country: text
+        division: text
