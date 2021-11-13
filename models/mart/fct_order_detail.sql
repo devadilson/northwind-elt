@@ -63,6 +63,7 @@ with
         left join products products on order_dtl.product_id = products.product_id
     )
 
+    /* We then join orders and orders detail to get the final fact table*/
     , final as (
         select
         order_dtl.order_id
