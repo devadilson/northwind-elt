@@ -55,7 +55,6 @@ with
 
     , orders_with_sk as (
         select
-            order_detail.order_id
             , employees.employee_id
             , employees.first_name
             , employees.last_name
