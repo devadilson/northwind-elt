@@ -81,7 +81,7 @@ with
 
    /*  select * from orders_with_sk */
 
-select  order_id
+select  orders.order_id
         , customer_id
         , customer_name
         , employees.employee_id
