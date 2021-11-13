@@ -60,7 +60,6 @@ with
             , employees.first_name
             , employees.last_name
             , employees.employee_id
-            , order_detail.product_id
             , customers.customer_id
             , customers.customer_name
             , orders.order_date
@@ -80,9 +79,9 @@ with
         left join order_detail order_detail on order_detail.order_id = orders.order_id and order_detail.product_id = products.product_id
     )
 
-    select * from orders_with_sk
+   /*  select * from orders_with_sk */
 
-/* select  order_id
+select  order_id
         , customer_id
         , customer_name
         , employees.employee_id
@@ -104,4 +103,4 @@ with
         , required_date 
         , supplier_id
         , supplier_name
-from products, orders_with_sk, shippers, suppliers, employees */
+from products, orders_with_sk, shippers, suppliers, employees
